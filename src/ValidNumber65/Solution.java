@@ -1,4 +1,4 @@
-package ValidNumber65;
+package validNumber65;
 public class Solution {
     /**
 	 * 非空格字符间不能有空格

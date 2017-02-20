@@ -1,4 +1,4 @@
-package ValidNumber65;
+package validNumber65;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
 
