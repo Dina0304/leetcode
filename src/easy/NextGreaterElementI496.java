@@ -2,13 +2,16 @@ package easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.Stack;
 
 public class NextGreaterElementI496 {
-	public int[] nextGreaterElement(int[] findNums, int[] nums) {
-		int[] resultNums = new int[findNums.length];
+	public static int[] nextGreaterElement(int[] findNums, int[] nums) {
+		/*int[] resultNums = new int[findNums.length];
         List<Integer> findNumsList = new ArrayList<Integer>();
         List<Integer> numsList = new ArrayList<Integer>();
         for (int i = 0; i < findNums.length; i++) {
@@ -35,12 +38,36 @@ public class NextGreaterElementI496 {
 			}
 			resultNums[i] = greaterNum;
 		}
+		return resultNums;*/
+		
+		
+		int[] resultNums = new int[findNums.length];
+		Map<Integer, Integer> numsMap = new HashMap<Integer, Integer>();
+		Stack<Integer> stack = new Stack<Integer>();
+		for (int i = 0; i < nums.length; i++) {
+			while (stack.size()!=0 && stack.peek()<nums[i]) {
+				numsMap.put(stack.peek(), nums[i]);
+				stack.pop();
+			}
+			stack.push(nums[i]);
+		}
+		while (stack.size()!=0) {
+			numsMap.put(stack.pop(), -1);
+		}
+		for (int i = 0; i < findNums.length; i++) {
+			resultNums[i] = numsMap.get(findNums[i]);
+		}
 		return resultNums;
     }
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int[] findNums = {4,1,2};
+		int[] nums = {1,3,4,2};
+		int[] resultNums = new int[3];
+		resultNums = nextGreaterElement(findNums,nums);
+		for (int i = 0; i < resultNums.length; i++) {
+			System.out.println(resultNums[i]);
+		}
 	}
 
 }

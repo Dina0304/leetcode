@@ -6,22 +6,17 @@ import java.util.List;
 public class FizzBuzz412 {
 	public List<String> fizzBuzz(int n) {
 		List<String> fbList = new ArrayList<String>();
-		int three = n/3;
-		int five = n/5;
-		int fifteen = n/15;
-		for (int i = 0; i < n; i++) {
-			fbList.add(i, i+"");
+		for (int i = 1; i <= n; i++) {
+			if (i%3==0 && i%5==0) {
+				fbList.add("FizzBuzz");
+			}else if (i%3 == 0) {
+				fbList.add("Fizz");
+			}else if (i%5 == 0) {
+				fbList.add("Buzz");
+			}else {
+				fbList.add(String.valueOf(i));
+			}
 		}
-		for (int i = 0; i < three; i++) {
-			fbList.set(i, "Fizz");
-		}
-		for (int i = 0; i < five; i++) {
-			fbList.set(i, "Buzz");
-		}
-		for (int i = 0; i < fifteen; i++) {
-			fbList.set(i, "FizzBuzz");
-		}
-		fbList.set(index, element)
 		
 //        List<String> fbList = new ArrayList<String>();
 //        for (int i = 1; i <= n; i++) {
