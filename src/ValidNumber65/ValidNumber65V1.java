@@ -1,19 +1,19 @@
-package validNumber65;
+package ValidNumber65;
 import java.util.Map;
 
 
 public class ValidNumber65V1 {
 	/**
-	 * ·Ç¿Õ¸ñ×Ö·û¼ä²»ÄÜÓÐ¿Õ¸ñ
-	 * µÚÒ»¸ö·Ç¿Õ¸ñ×Ö·ûºÍ×îºóÒ»¸ö·Ç¿Õ¸ñ×Ö·ûÖ®¼äÈç¹ûÓÐ¿Õ¸ñ£¬Ôòfalse
+	 * ï¿½Ç¿Õ¸ï¿½ï¿½Ö·ï¿½ï¿½ä²»ï¿½ï¿½ï¿½Ð¿Õ¸ï¿½
+	 * ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½Ö·ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¿Õ¸ï¿½ï¿½ï¿½false
 	 * @param s
-	 * @return s." "´ú±í´íÎó£»·ñÔò´ú±íÈ¥µô¿Õ¸ñºóµÄ×Ö·û´®¡£
+	 * @return s." "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó£»·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	public static String isBlankOK(String s) {
 		int first = -1; 
 		int last = -1;
 		int blankCount = 0;
-		//»ñÈ¡µÚÒ»¸ö·Ç¿Õ¸ñ×Ö·û£¬ºÍ×îºóÒ»¸ö·Ç¿Õ¸ñ×Ö·û
+		//ï¿½ï¿½È¡ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½Ö·ï¿½
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)!=' ') {
 				if (first == -1) {
@@ -24,11 +24,11 @@ public class ValidNumber65V1 {
 				blankCount++;
 			}
 		}
-		if (blankCount == s.length()) {//È«ÊÇ¿Õ¸ñ
+		if (blankCount == s.length()) {//È«ï¿½Ç¿Õ¸ï¿½
 			s = "";
 			return s;
 		}
-		//ÅÐ¶ÏÒÔÉÏÁ½¸ö×Ö·û¼äÊÇ·ñÓÐ¿Õ¸ñ
+		//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ð¿Õ¸ï¿½
 		for (int i = first; i <= last; i++) {
 			if (s.charAt(i)==' ') {
 				s = "";
@@ -42,7 +42,7 @@ public class ValidNumber65V1 {
 	
 	/** 
 	 * @param s
-	 * @return ePos: -2:¶à¸öe£»-1£ºÎÞe£»´óÓÚµÈÓÚ0£ºeµÄÎ»ÖÃ
+	 * @return ePos: -2:ï¿½ï¿½ï¿½eï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½0ï¿½ï¿½eï¿½ï¿½Î»ï¿½ï¿½
 	 */
 	public static int getEPos(String s) {
 		int ePos = -1;
@@ -62,9 +62,9 @@ public class ValidNumber65V1 {
 	}
 	
 	/**
-	 * ÅÐ¶ÏeÊÇ·ñ¿ÉÒÔ
-	 * eÇ°±ØÐëÓÐÊý×Ö
-	 * eºó±ØÐëÓÐÄÚÈÝ£¬¶ÔÓÚÄÚÈÝµÄÒªÇó£º²»ÄÜÓÐÐ¡Êýµã£»ÈôÓÐ+£¬-£¬±ØÐëÊÇ+£¬-&Êý×Ö
+	 * ï¿½Ð¶ï¿½eï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+	 * eÇ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	 * eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½Òªï¿½ó£º²ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ã£»ï¿½ï¿½ï¿½ï¿½+ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½+ï¿½ï¿½-&ï¿½ï¿½ï¿½ï¿½
 	 * @param s
 	 * @param ePos
 	 * @return
@@ -75,7 +75,7 @@ public class ValidNumber65V1 {
 		if (ePos==0) {
 			isOk = false;
 		}else {
-		    //eÇ°±ØÐëÓÐÖÁÉÙÒ»¸öÊý×Ö£¬¿ÉÒÔÓÐÐ¡Êýµã
+		    //eÇ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
 			for (int i = 0; i < ePos; i++) {
 				if (s.charAt(i)>='0' && s.charAt(i)<='9') {
 					count++;
@@ -87,21 +87,21 @@ public class ValidNumber65V1 {
 				return isOk;
 			}
 			
-			//eºóÓÐÖÁÉÙÒ»Î»
+			//eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»
 			if (s.length()-ePos>1) {
-				for (int i = ePos; i < s.length(); i++) {//ÈôeºóÓÐÐ¡Êýµã£¬Ôòfalse
+				for (int i = ePos; i < s.length(); i++) {//ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ã£¬ï¿½ï¿½false
 					if (s.charAt(i)=='.') {
 						isOk = false;
 						break;
 					}
 				}
-				if (s.length()-ePos==2) {//eºóÖ»ÓÐÒ»Î»£¬Ôò±ØÐëÎªÊý×Ö
+				if (s.length()-ePos==2) {//eï¿½ï¿½Ö»ï¿½ï¿½Ò»Î»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
 					if ('0'<=s.charAt(ePos+1) && s.charAt(ePos+1)<='9') {
 						isOk = true;
 					}else {
 						isOk = false;
 					}
-				}else {//eºóÓÐ¶àÎ»,µ«ÊÇ²»ÄÜÓÐÐ¡Êýµã
+				}else {//eï¿½ï¿½ï¿½Ð¶ï¿½Î»,ï¿½ï¿½ï¿½Ç²ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
 					for (int i = ePos; i < s.length(); i++) {
 						if (s.charAt(i)=='.') {
 							isOk = false;
@@ -109,7 +109,7 @@ public class ValidNumber65V1 {
 						}
 					}
 				}
-			}else {//eÊÇ×îºóÒ»Î»
+			}else {//eï¿½ï¿½ï¿½ï¿½ï¿½Ò»Î»
 				isOk = false;
 			}
 		}
@@ -117,8 +117,8 @@ public class ValidNumber65V1 {
 	}
 	
 	/**
-	 * + - µÄÎ»ÖÃ
-	 * Ö»ÄÜÔÚÊ×Î»»òÕßeËæºóÒ»Î»
+	 * + - ï¿½ï¿½Î»ï¿½ï¿½
+	 * Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½Ò»Î»
 	 * @param s
 	 * @return
 	 */
@@ -126,13 +126,13 @@ public class ValidNumber65V1 {
 		boolean isOk = true;
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)=='+' || s.charAt(i)=='-') {
-				if (ePos > -1) {//ÓÐe
+				if (ePos > -1) {//ï¿½ï¿½e
 					if (i==0 || i==ePos+1) {
 						isOk = true;
 					}else {
 						return false;
 					}
-				}else if (ePos == -1) {//ÎÞe
+				}else if (ePos == -1) {//ï¿½ï¿½e
 					if (i!=0) {
 						return false;
 					}
@@ -144,8 +144,8 @@ public class ValidNumber65V1 {
 	}
 	
 	/**
-	 * ÅÐ¶ÏÐ¡ÊýµãÎ»ÖÃÊÇ·ñ¿ÉÒÔ
-	 * Ð¡ÊýµãÖ»ÄÜÓÐÒ»¸ö.
+	 * ï¿½Ð¶ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+	 * Ð¡ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½.
 	 * @param s
 	 * @return
 	 */
@@ -189,9 +189,9 @@ public class ValidNumber65V1 {
 			if (ePos == -2) {
 				return false;
 			}else {
-				if (ePos == -1) {//ÎÞe
+				if (ePos == -1) {//ï¿½ï¿½e
 					isNumber = isPlusMinusOk(trimString, ePos) && isDotOk(trimString);
-				}else if (ePos >= 0) {//ÓÐe£¬ÇÒeµÄÎ»ÖÃÎªePos
+				}else if (ePos >= 0) {//ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½eï¿½ï¿½Î»ï¿½ï¿½ÎªePos
 					isNumber = isEOk(trimString, ePos) && isPlusMinusOk(trimString, ePos) && isDotOk(trimString);
 				}
 				

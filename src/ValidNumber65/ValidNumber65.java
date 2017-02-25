@@ -1,4 +1,4 @@
-package validNumber65;
+package ValidNumber65;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import javax.sound.sampled.Line;
 
 public class ValidNumber65 {
 	
-	//Ê×Î»Ö»ÄÜÊ¹0-9£¬+£¬-£¬e
+	//ï¿½ï¿½Î»Ö»ï¿½ï¿½Ê¹0-9ï¿½ï¿½+ï¿½ï¿½-ï¿½ï¿½e
 	public static boolean isFirstOk(String s) {
 		boolean isOk = false;
 		char firstChar = s.charAt(0);
@@ -16,7 +16,7 @@ public class ValidNumber65 {
 		}
 		return isOk;
 	}
-	//×îºóÒ»Î»Ö»ÄÜÊÇÊý×Ö0-9£¬²»ÄÜÊÇe£¬²»ÄÜÊÇ+-
+	//ï¿½ï¿½ï¿½Ò»Î»Ö»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½0-9ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½+-
 	public static boolean isLastOk(String s) {
 		boolean isOk = false;
 		char lastChar = s.charAt(s.length()-1);
@@ -26,10 +26,10 @@ public class ValidNumber65 {
 		return isOk;
 	}
 	
-	//eÇ° »òÕß ÎÞeµÄÖÐ¼ä
+	//eÇ° ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½eï¿½ï¿½ï¿½Ð¼ï¿½
 	public static boolean isBeforeEOk(String s,int pos,boolean e) {
 		boolean isOk = false;
-		if (e) {//ÓÐe
+		if (e) {//ï¿½ï¿½e
 			if (pos==0) {
 				return false;
 			}
@@ -63,23 +63,23 @@ public class ValidNumber65 {
 		return isOk;
 	}
 	
-	//eºó1
+	//eï¿½ï¿½1
 	public static boolean isE1Ok(String s, int pos) {
 		boolean isOk = false;
 		if (pos<s.length()-1) {
 			if (('0'<s.charAt(pos+1)) && (s.charAt(pos+1)<='9')) {
 				isOk = true;
 			}
-		}else {//eºóÎÞ
+		}else {//eï¿½ï¿½ï¿½ï¿½
 			isOk = false;
 		}
 		return isOk;
 	}
 	
-	//eºó2ºó
+	//eï¿½ï¿½2ï¿½ï¿½
 	public static boolean isE2LaterOk(String s,int pos) {
 		boolean isOk = false;
-		if (pos+2>s.length()-1) {//ÎÞeºó2ºó
+		if (pos+2>s.length()-1) {//ï¿½ï¿½eï¿½ï¿½2ï¿½ï¿½
 			isOk = true;
 		}else {
 			for (int i = pos+1; i < s.length(); i++) {
@@ -95,7 +95,7 @@ public class ValidNumber65 {
 		return isOk;
 	}
 	
-	//·µ»ØeµÄÎ»ÖÃ¡£-2£º¶à¸öe£¬±¨´í£»-1£ºÎÞe 
+	//ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½Î»ï¿½Ã¡ï¿½-2ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½ï¿½ï¿½ï¿½-1ï¿½ï¿½ï¿½ï¿½e 
 	public static int ePos(String s) {
 		int ePos = -1;
 		int eCount = 0;
@@ -128,7 +128,7 @@ public class ValidNumber65 {
 		int count = 0;
 		int dotCount = 0,numCount=0;
 		int flag1 = -1,flag2= -1,flag3 = -1;
-		//Ö»ÓÐÒ»Î»
+		//Ö»ï¿½ï¿½Ò»Î»
 		if (s.length()==1) {
 			if ('0'<=s.charAt(0) && s.charAt(0)<='9') {
 				return true;
@@ -136,7 +136,7 @@ public class ValidNumber65 {
 				return false;
 			}
 		}
-		//²»ÄÜÈ«ÊÇ¿Õ¸ñ
+		//ï¿½ï¿½ï¿½ï¿½È«ï¿½Ç¿Õ¸ï¿½
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)==' ') {
 				count++;
@@ -146,16 +146,16 @@ public class ValidNumber65 {
 			return false;
 		}
 		
-		//Êý×ÖÖ®¼ä²»ÄÜÓÐ¿Õ¸ñ
+		//ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ä²»ï¿½ï¿½ï¿½Ð¿Õ¸ï¿½
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)!=' ') {
-				flag1 = i;//µÚÒ»¸ö·Ç¿Õ¸ñµÄÎ»ÖÃ
+				flag1 = i;//ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½Î»ï¿½ï¿½
 				break;
 			}
 		}
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)!=' ') {
-				flag2 = i;//×îºóÒ»¸ö·Ç¿Õ¸ñµÄÎ»ÖÃ
+				flag2 = i;//ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ç¿Õ¸ï¿½ï¿½Î»ï¿½ï¿½
 			}
 		}
 		for (int i = flag1; i <= flag2; i++) {
@@ -164,7 +164,7 @@ public class ValidNumber65 {
 			}
 		}
 		
-		//Ð¡ÊýµãÖ»ÄÜÓÐ1¸ö£¬²¢ÇÒ³ýÁË¿Õ¸ñÍâ²»ÄÜÖ»ÓÐÐ¡Êýµã
+		//Ð¡ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Ë¿Õ¸ï¿½ï¿½â²»ï¿½ï¿½Ö»ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)=='.') {
 				dotCount++;
@@ -178,13 +178,13 @@ public class ValidNumber65 {
 		}
 		
 		int ePos = ePos(s);
-		if (ePos == -2) {//¶à¸öe
+		if (ePos == -2) {//ï¿½ï¿½ï¿½e
 			return false;
-		} else if (ePos == -1) {//ÎÞe
+		} else if (ePos == -1) {//ï¿½ï¿½e
 			if (isFirstOk(s) && isLastOk(s) && isBeforeEOk(s, ePos, false)) {
 				isNumber = true;
 			}
-		} else {//ÓÐe
+		} else {//ï¿½ï¿½e
 			for(int i=0; i<ePos;i++) {
 			    if(s.charAt(i)<'0' || s.charAt(i)>'9') {
 			        isNumber = false;
