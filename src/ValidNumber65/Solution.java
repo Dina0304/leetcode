@@ -1,16 +1,16 @@
 package ValidNumber65;
 public class Solution {
     /**
-	 * �ǿո��ַ��䲻���пո�
-	 * ��һ���ǿո��ַ������һ���ǿո��ַ�֮������пո���false
+	 * 非空格字符间不能有空格
+	 * 第一个非空格字符和最后一个非空格字符之间如果有空格，则false
 	 * @param s
-	 * @return s." "������󣻷������ȥ���ո����ַ�����
+	 * @return s." "代表错误；否则代表去掉空格后的字符串。
 	 */
 	public String isBlankOK(String s) {
 		int first = -1; 
 		int last = -1;
 		int blankCount = 0;
-		//��ȡ��һ���ǿո��ַ��������һ���ǿո��ַ�
+		//获取第一个非空格字符，和最后一个非空格字符
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)!=' ') {
 				if (first == -1) {
@@ -21,11 +21,11 @@ public class Solution {
 				blankCount++;
 			}
 		}
-		if (blankCount == s.length()) {//ȫ�ǿո�
+		if (blankCount == s.length()) {//全是空格
 			s = "";
 			return s;
 		}
-		//�ж����������ַ����Ƿ��пո�
+		//判断以上两个字符间是否有空格
 		for (int i = first; i <= last; i++) {
 			if (s.charAt(i)==' ') {
 				s = "";
@@ -39,7 +39,7 @@ public class Solution {
 	
 	/** 
 	 * @param s
-	 * @return ePos: -2:���e��-1����e�����ڵ���0��e��λ��
+	 * @return ePos: -2:多个e；-1：无e；大于等于0：e的位置
 	 */
 	public int getEPos(String s) {
 		int ePos = -1;
@@ -59,9 +59,9 @@ public class Solution {
 	}
 	
 	/**
-	 * �ж�e�Ƿ����
-	 * eǰ����������
-	 * e����������ݣ��������ݵ�Ҫ�󣺲�����С���㣻����+��-��������+��-&����
+	 * 判断e是否可以
+	 * e前必须有数字
+	 * e后必须有内容，对于内容的要求：不能有小数点；若有+，-，必须是+，-&数字
 	 * @param s
 	 * @param ePos
 	 * @return
@@ -72,7 +72,7 @@ public class Solution {
 		if (ePos==0) {
 			isOk = false;
 		}else {
-		    //eǰ����������һ�����֣�������С����
+		    //e前必须有至少一个数字，可以有小数点
 			for (int i = 0; i < ePos; i++) {
 				if (s.charAt(i)>='0' && s.charAt(i)<='9') {
 					count++;
@@ -84,21 +84,21 @@ public class Solution {
 				return isOk;
 			}
 			
-			//e��������һλ
+			//e后有至少一位
 			if (s.length()-ePos>1) {
-				for (int i = ePos; i < s.length(); i++) {//��e����С���㣬��false
+				for (int i = ePos; i < s.length(); i++) {//若e后有小数点，则false
 					if (s.charAt(i)=='.') {
 						isOk = false;
 						break;
 					}
 				}
-				if (s.length()-ePos==2) {//e��ֻ��һλ�������Ϊ����
+				if (s.length()-ePos==2) {//e后只有一位，则必须为数字
 					if ('0'<=s.charAt(ePos+1) && s.charAt(ePos+1)<='9') {
 						isOk = true;
 					}else {
 						isOk = false;
 					}
-				}else {//e���ж�λ,���ǲ�����С����
+				}else {//e后有多位,但是不能有小数点
 					for (int i = ePos; i < s.length(); i++) {
 						if (s.charAt(i)=='.') {
 							isOk = false;
@@ -106,7 +106,7 @@ public class Solution {
 						}
 					}
 				}
-			}else {//e�����һλ
+			}else {//e是最后一位
 				isOk = false;
 			}
 		}
@@ -114,8 +114,8 @@ public class Solution {
 	}
 	
 	/**
-	 * + - ��λ��
-	 * ֻ������λ����e���һλ
+	 * + - 的位置
+	 * 只能在首位或者e随后一位
 	 * @param s
 	 * @return
 	 */
@@ -123,13 +123,13 @@ public class Solution {
 		boolean isOk = true;
 		for (int i = 0; i < s.length(); i++) {
 			if (s.charAt(i)=='+' || s.charAt(i)=='-') {
-				if (ePos > -1) {//��e
+				if (ePos > -1) {//有e
 					if (i==0 || i==ePos+1) {
 						isOk = true;
 					}else {
 						return false;
 					}
-				}else if (ePos == -1) {//��e
+				}else if (ePos == -1) {//无e
 					if (i!=0) {
 						return false;
 					}
@@ -141,8 +141,8 @@ public class Solution {
 	}
 	
 	/**
-	 * �ж�С����λ���Ƿ����
-	 * С����ֻ����һ��.
+	 * 判断小数点位置是否可以
+	 * 小数点只能有一个.
 	 * @param s
 	 * @return
 	 */
@@ -186,9 +186,9 @@ public class Solution {
 			if (ePos == -2) {
 				return false;
 			}else {
-				if (ePos == -1) {//��e
+				if (ePos == -1) {//无e
 					isNumber = isPlusMinusOk(trimString, ePos) && isDotOk(trimString);
-				}else if (ePos >= 0) {//��e����e��λ��ΪePos
+				}else if (ePos >= 0) {//有e，且e的位置为ePos
 					isNumber = isEOk(trimString, ePos) && isPlusMinusOk(trimString, ePos) && isDotOk(trimString);
 				}
 				
