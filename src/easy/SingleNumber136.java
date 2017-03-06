@@ -26,9 +26,28 @@ public class SingleNumber136 {
     }
 
 	public static void main(String[] args) {
-		int[] nums = {0,1,0};
+		/*int[] nums = {0,1,0};
 		int singleNum = singleNumber(nums);
-		System.out.println(singleNum);
+		System.out.println(singleNum);*/
+		String s = "dddccdbba";
+		int index = -1;
+        String temp = "";
+        System.out.println("temp: "+temp.concat("a"));
+        if(s.length()==1) {
+            System.out.println(0);
+        }
+        for(int i=0; i<s.length(); i++) {
+        	String curString = String.valueOf(s.charAt(i));
+            if(temp.lastIndexOf(curString)==-1) {
+                if(i == s.lastIndexOf(curString)) {
+                    index = i;
+                    break;
+                }else if(i != s.lastIndexOf(curString)){
+                    temp = temp.concat(curString);
+                }
+            }
+        }
+        System.out.println(index);
 	}
 
 }
