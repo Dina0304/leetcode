@@ -11,7 +11,6 @@ public class Test {
 		System.out.println(start);
 		int len = (int)Math.ceil(5.1);
 		System.out.println(len);
-		Arrays.sort([1,2]);
 	}
 
 }
