@@ -1,6 +1,7 @@
-package ValidNumber65;
-public class Solution {
-    /**
+package hard;
+
+public class ValidNumber65 {
+	/**
 	 * 非空格字符间不能有空格
 	 * 第一个非空格字符和最后一个非空格字符之间如果有空格，则false
 	 * @param s
@@ -20,6 +21,10 @@ public class Solution {
 			}else {
 				blankCount++;
 			}
+		}
+		if (blankCount == s.length()) {//全是空格
+			s = "";
+			return s;
 		}
 		if (blankCount == s.length()) {//全是空格
 			s = "";
@@ -72,7 +77,7 @@ public class Solution {
 		if (ePos==0) {
 			isOk = false;
 		}else {
-		    //e前必须有至少一个数字，可以有小数点
+			//e前必须有至少一个数字，可以有小数点
 			for (int i = 0; i < ePos; i++) {
 				if (s.charAt(i)>='0' && s.charAt(i)<='9') {
 					count++;
@@ -141,8 +146,13 @@ public class Solution {
 	}
 	
 	/**
+<<<<<<< HEAD
+	 * �ж�С����λ���Ƿ����
+	 * С����ֻ����һ��.
+=======
 	 * 判断小数点位置是否可以
 	 * 小数点只能有一个.
+>>>>>>> 25d34e4f098307e587c1ed12df809ae49f373d6d
 	 * @param s
 	 * @return
 	 */
