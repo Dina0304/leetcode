@@ -1,4 +1,5 @@
-package WordLadderII126;
+package hard;
+
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -11,16 +12,16 @@ import java.util.Iterator;
 /**
  * 
  * @author Dina
- *Ë¼Â·£ºÅĞ¶ÏwordListÖĞÄÄĞ©µ¥´ÊÓëbeginWordÖ»²îÒ»¸ö×ÖÄ¸£¬·Ö±ğ½«beginWord±ä³É¸Ãµ¥´Ê£¬²¢ÇÒ½«¸Ãµ¥´Ê´ÓwordListÖĞÌŞ³ı£¬²¢¼ÓÈëµ½returnListÖĞ¡£
- *µ¥´ÊÖĞ¸ü¸Ä¹ıµÄ×ÖÄ¸ºóĞø²»»áÔÙ¸ü¸Ä
- *ÅĞ¶ÏbeginWordÓëendWordÊÇ·ñÖ»²îÒ»¸ö×ÖÄ¸£¬Èç¹ûÊÇ£¬ÔòÖ±½Ó½«beginWord±ä³ÉendWord£¬½áÊø¡£
- *±È½ÏreturnList³¤¶Ì£¬Êä³ö×î¶ÌµÄ¡£
+ *æ€è·¯ï¼šåˆ¤æ–­wordListä¸­å“ªäº›å•è¯ä¸beginWordåªå·®ä¸€ä¸ªå­—æ¯ï¼Œåˆ†åˆ«å°†beginWordå˜æˆè¯¥å•è¯ï¼Œå¹¶ä¸”å°†è¯¥å•è¯ä»wordListä¸­å‰”é™¤ï¼Œå¹¶åŠ å…¥åˆ°returnListä¸­ã€‚
+ *å•è¯ä¸­æ›´æ”¹è¿‡çš„å­—æ¯åç»­ä¸ä¼šå†æ›´æ”¹
+ *åˆ¤æ–­beginWordä¸endWordæ˜¯å¦åªå·®ä¸€ä¸ªå­—æ¯ï¼Œå¦‚æœæ˜¯ï¼Œåˆ™ç›´æ¥å°†beginWordå˜æˆendWordï¼Œç»“æŸã€‚
+ *æ¯”è¾ƒreturnListé•¿çŸ­ï¼Œè¾“å‡ºæœ€çŸ­çš„ã€‚
  */
-public class WordLadderIIV1 {
+public class WordLadderII126 {
 	/**
-	 * ÅĞ¶ÏÁ½¸öµ¥´ÊÊÇ·ñÖ»ÓĞÒ»¸ö×ÖÄ¸²»ÏàÍ¬
-	 * ÈôstartWordÓëendWordÖ»²îÒ»¸ö×ÖÄ¸£¬ÔòÖ±½Ó½«beginWord±ä³ÉendWord£¬½áÊø¡£
-	 * ÈômidWordÓëwordListÖĞµ¥´ÊÖ»²îÒ»¸ö×ÖÄ¸£¬Ôò½«beginWord±ä³É¸Ãµ¥´Ê£¬²¢ÇÒ½«¸Ãµ¥´Ê´ÓwordListÖĞÌŞ³ı£¬²¢¼ÓÈëµ½returnListÖĞ¡£
+	 * åˆ¤æ–­ä¸¤ä¸ªå•è¯æ˜¯å¦åªæœ‰ä¸€ä¸ªå­—æ¯ä¸ç›¸åŒ
+	 * è‹¥startWordä¸endWordåªå·®ä¸€ä¸ªå­—æ¯ï¼Œåˆ™ç›´æ¥å°†beginWordå˜æˆendWordï¼Œç»“æŸã€‚
+	 * è‹¥midWordä¸wordListä¸­å•è¯åªå·®ä¸€ä¸ªå­—æ¯ï¼Œåˆ™å°†beginWordå˜æˆè¯¥å•è¯ï¼Œå¹¶ä¸”å°†è¯¥å•è¯ä»wordListä¸­å‰”é™¤ï¼Œå¹¶åŠ å…¥åˆ°returnListä¸­ã€‚
 	 * @param beginWord
 	 * @param endWord
 	 * @return
@@ -40,7 +41,7 @@ public class WordLadderIIV1 {
 		return isJustOneDiff;
 	}
 	/**
-	 * ·µ»ØwordListÖĞÓëbeginÖ»²îÒ»¸ö×ÖÄ¸µÄµÚÒ»¸öµ¥´Ê
+	 * è¿”å›wordListä¸­ä¸beginåªå·®ä¸€ä¸ªå­—æ¯çš„ç¬¬ä¸€ä¸ªå•è¯
 	 * @param beginWord
 	 * @param wordList
 	 * @return
@@ -85,11 +86,11 @@ public class WordLadderIIV1 {
 	public static List<List<String>> findLadders(String beginWord, String endWord, Set<String> wordList) {
 		int len = beginWord.length();
 		List<List<String>> lists = new LinkedList<List<String>>();
-		Set<String> midSet = wordList;//¿É´Ó¸Ã¼¯ºÏÖĞÉ¾µôÒÑ¼ÓÈë×îÖÕlistsµÄµ¥´Ê
-		List<String> midList = new LinkedList<String>();//×îÖÕlistsµÄ×Ólist
+		Set<String> midSet = wordList;//å¯ä»è¯¥é›†åˆä¸­åˆ æ‰å·²åŠ å…¥æœ€ç»ˆlistsçš„å•è¯
+		List<String> midList = new LinkedList<String>();//æœ€ç»ˆlistsçš„å­list
 		midList.add(beginWord);
 		String word = null;
-		List<String> strList = new ArrayList<String>();//´æ·ÅËùÓĞÓëbeginWordÓĞÒ»¸ö×ÖÄ¸²»ÏàÍ¬µÄµ¥´Ê
+		List<String> strList = new ArrayList<String>();//å­˜æ”¾æ‰€æœ‰ä¸beginWordæœ‰ä¸€ä¸ªå­—æ¯ä¸ç›¸åŒçš„å•è¯
 		strList = getOneDiffWords(beginWord, wordList);
 		for (int i = 0; i<strList.size() && len>0; i++) {
 			len--;
@@ -174,3 +175,4 @@ public class WordLadderIIV1 {
 	}
 
 }
+
