@@ -1,19 +1,21 @@
 package toutiao.two;
 
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Scanner cin = new Scanner(System.in);
-        int a, b;
-        while(cin.hasNextInt())
-        {
-            a = cin.nextInt();
-            b = cin.nextInt();
-            System.out.println(a + b);
-        }
+		Scanner scanner = new Scanner(System.in);
+		HashSet<Long> set = new HashSet<Long>();
+		while (scanner.hasNext()) {
+			Long i = scanner.nextLong();
+			if (i == 0) {
+				break;
+			}
+			set.add(i);
+		}
+		System.out.println(set.size());
 	}
 
 }
+
