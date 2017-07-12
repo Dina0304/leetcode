@@ -70,8 +70,8 @@ public class Test {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] arr = {4,9,6,7,8};
-		List<List<Integer>> list = findSubsequences(arr);
+//		int[] arr = {4,9,6,7,8};
+//		List<List<Integer>> list = findSubsequences(arr);
 		
 //		String[] strs = {"aabbcc", "aabbcc","cb"};
 //		System.out.println(findLUSlength(strs));
@@ -80,6 +80,7 @@ public class Test {
 //		System.out.println(start);
 //		int len = (int)Math.ceil(5.1);
 //		System.out.println(len);
+		
 	}
 
 }
