@@ -9,11 +9,11 @@ public class Question3 {
 		int a = cin.nextInt();
 		int b = cin.nextInt();
 		int c = cin.nextInt();
-		//层次遍历
-		int[] level = new int[(1<<k) - 1];
+		// 层次遍历
+		int[] level = new int[(1 << k) - 1];
 		for (int i = 0; i < k; i++) {
-			int m = 1<<(k-1);
-			
+			int m = 1 << (k - 1);
+
 		}
 	}
 }
