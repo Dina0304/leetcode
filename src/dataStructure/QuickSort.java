@@ -60,7 +60,6 @@ public class QuickSort {
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] arr = {4,2,8,3,11,1,19,7};
 		qsort(arr,0,arr.length-1);
 		for (int i = 0; i < arr.length; i++) {
