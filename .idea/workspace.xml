@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f91ea0f3-cd38-4121-8c4b-b1e49c863a6c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ShenZhouXinXi/Four.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ShenZhouXinXi/One.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ShenZhouXinXi/Three.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ShenZhouXinXi/Two.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dataStructure/BinTree/LowestAncestor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dataStructure/CountOfSmaller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dataStructure/PathInGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/easy/FizzBuzz412.class" afterPath="$PROJECT_DIR$/bin/easy/FizzBuzz412.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/easy/FlipGame293.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/easy/ShortestWordDistance243.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/easy/ValidWordAbbreviation408.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/medium/PermuteUnique.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/offer/List1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/easy/HarmmingDistance461.class" afterPath="$PROJECT_DIR$/bin/easy/HarmmingDistance461.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/easy/KeyboardRow500.class" afterPath="$PROJECT_DIR$/bin/easy/KeyboardRow500.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/easy/NextGreaterElementI496.class" afterPath="$PROJECT_DIR$/bin/easy/NextGreaterElementI496.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/easy/NumberComplement476.class" afterPath="$PROJECT_DIR$/bin/easy/NumberComplement476.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/easy/ReverseString344.class" afterPath="$PROJECT_DIR$/bin/easy/ReverseString344.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataStructure/HeapSort.java" afterPath="$PROJECT_DIR$/src/dataStructure/HeapSort.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataStructure/Practice.java" afterPath="$PROJECT_DIR$/src/dataStructure/Practice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/dataStructure/QuickSort.java" afterPath="$PROJECT_DIR$/src/dataStructure/QuickSort.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/easy/HarmmingDistance461.java" afterPath="$PROJECT_DIR$/src/easy/HarmmingDistance461.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/easy/Test.java" afterPath="$PROJECT_DIR$/src/easy/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/tencent/Question3.java" afterPath="$PROJECT_DIR$/src/tencent/Question3.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,16 +38,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LowestAncestor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LowestAncestor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dataStructure/BinTree/LowestAncestor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
-              <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+              <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#316#317#0" expanded="true" />
                 <element signature="e#354#355#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuickSort.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dataStructure/QuickSort.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="811">
+              <caret line="70" column="5" lean-forward="false" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -86,13 +93,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/ShenZhouXinXi/One.java" />
-        <option value="$PROJECT_DIR$/src/dataStructure/QuickSort.java" />
         <option value="$PROJECT_DIR$/src/ShenZhouXinXi/Two.java" />
         <option value="$PROJECT_DIR$/src/ShenZhouXinXi/Three.java" />
         <option value="$PROJECT_DIR$/src/ShenZhouXinXi/Four.java" />
         <option value="$PROJECT_DIR$/src/dataStructure/PathInGraph.java" />
         <option value="$PROJECT_DIR$/src/dataStructure/CountOfSmaller.java" />
         <option value="$PROJECT_DIR$/src/dataStructure/BinTree/LowestAncestor.java" />
+        <option value="$PROJECT_DIR$/src/dataStructure/QuickSort.java" />
       </list>
     </option>
   </component>
@@ -374,15 +381,16 @@
       <option name="presentableId" value="Default" />
       <updated>1508051497857</updated>
       <workItem from="1508051506701" duration="24303000" />
-      <workItem from="1508603830464" duration="2182000" />
+      <workItem from="1508603830464" duration="2289000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26485000" />
+    <option name="totallyTimeSpent" value="26592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -396,7 +404,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2536349" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -474,17 +482,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/dataStructure/QuickSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="66" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ShenZhouXinXi/Three.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="64" selection-end-column="5" />
+          <folding>
+            <element signature="e#157#158#0" expanded="false" />
+            <element signature="e#202#203#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -492,6 +497,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
           <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -499,6 +505,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="944">
           <caret line="63" column="5" lean-forward="true" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -531,12 +538,20 @@
     <entry file="file://$PROJECT_DIR$/src/dataStructure/BinTree/LowestAncestor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
-          <caret line="61" column="27" lean-forward="true" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+          <caret line="61" column="27" lean-forward="false" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#316#317#0" expanded="true" />
             <element signature="e#354#355#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dataStructure/QuickSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="811">
+          <caret line="70" column="5" lean-forward="false" selection-start-line="70" selection-start-column="5" selection-end-line="70" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
