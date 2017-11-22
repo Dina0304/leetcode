@@ -50,6 +50,7 @@ public class BestIteration {
                     while ((evaluation=br.readLine())!=null && index<evaluationNum) {
                         String[] evaluationArray = evaluation.split(evaluationRegex);
                         String evaluationVal = evaluationArray[evaluationArray.length-1];
+                        if (!evaluationVal.contains(".")) continue;
                         evaluationMap.put(evaluationItems.get(index), evaluationVal);
                         ++index;
                     }
@@ -114,9 +115,10 @@ public class BestIteration {
          */
 
         // log 文件路径
-        String inputFilePath = "E:\\graduate\\cv\\log\\slice_Train-2017-10-22-16-20-14.log";
+//        String inputFilePath = "E:\\graduate\\cv\\log\\slice_Train-2017-10-22-16-20-14.log";
+        String inputFilePath = "/Users/dina/Documents/lab/136/136/data2/dina/pedestrian/logs/pedestrian/rap/whole/whole_7parts-2017-11-20-20-13-17.log";
         // 只有 iteration test 相关信息的log 的输出路径
-        String outputFilePath = "E:\\graduate\\cv\\log\\slice_Train-2017-10-22-16-20-14-iteration.log";
+        String outputFilePath = "/Users/dina/Documents/lab/logs/rap/bi_whole_7parts-2017-11-20-20-13-17.log";
         // 匹配 iteration test 文本的正则
         String iterRegex = ".*Iteration\\s\\d+,\\sTesting\\snet\\s\\(\\#\\d\\)";
         // 切分 iteration test 文本行的正则
@@ -124,7 +126,7 @@ public class BestIteration {
         // 切分 评价标准 文本行的正则
         String evaluationRegex = "\\s";
         // 迭代轮数的下标
-        int iterIndex = 5;
+        int iterIndex = 6;//5;
         // 评价标准数值的下标， 目前该值可以随意设置，因为会在 getIterationList 方法中默认取最后一个值，作为评价标准数值
         int evaluationIndex = 14;
         // 评价标准项列表

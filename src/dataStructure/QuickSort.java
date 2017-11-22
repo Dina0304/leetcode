@@ -40,11 +40,11 @@ public class QuickSort {
         pivot(arr, l, r);
         pivot = arr[l];
         while(l < r) {
-            while(l < r && arr[r] > pivot) {
+            while(l < r && arr[r] >= pivot) {
                 r--;
             }
             swap(arr, l, r);
-            while(l < r && arr[l] < pivot) {
+            while(l < r && arr[l] <= pivot) {
                 l++;
             }
             swap(arr, l, r);
@@ -63,7 +63,7 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] arr = {4, 2, 8, 3, 11, 1, 19, 7};
+        int[] arr = {4, 2, 7, 8, 3, 11, 7, 1, 19, 7};
         qsort(arr, 0, arr.length - 1);
         for(int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
